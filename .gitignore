@@ -26,3 +26,6 @@ sysinfo.txt
 
 # Addressables
 ServerData/
+
+*.env
+*.virtual
