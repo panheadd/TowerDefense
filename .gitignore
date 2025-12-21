@@ -1,0 +1,28 @@
+# Unity generated folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+# Visual Studio / Rider
+.vs/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Unity cache
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# Crash reports
+sysinfo.txt
+
+# Addressables
+ServerData/
