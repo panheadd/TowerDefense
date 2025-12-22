@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerMenu : MonoBehaviour
 {
+    public ButtonSound buttonSound;
 
     public GameObject towerMenuUI;
     // Start is called before the first frame update
@@ -21,5 +22,6 @@ public class TowerMenu : MonoBehaviour
     private void OnMouseDown()
     {
         towerMenuUI.SetActive(true);
+        buttonSound.PlaySound();
     }
 }
