@@ -21,6 +21,10 @@ public class Unit : MonoBehaviour
 
     void Update()
     {
+        if (isAttacking) return;
+
+    
+        enemiesInRange.RemoveAll(e => e == null || e.isDead);
         if (enemiesInRange.Count == 0)
             return;
 

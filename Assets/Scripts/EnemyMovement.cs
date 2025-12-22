@@ -10,6 +10,9 @@ public class EnemyMovement : MonoBehaviour
     private int waypointIndex = 0;
     private Animator animator;
 
+    public bool isDead { get; private set; } = false;
+
+
     void Start()
     {
         waypoints = waypoint.GetComponentsInChildren<Transform>();
@@ -18,6 +21,8 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        if (isDead) return;
+
         Move();
     }
 
@@ -55,7 +60,26 @@ public class EnemyMovement : MonoBehaviour
 
 public void Die()
 {
-    Destroy(gameObject);
+    if (isDead) return;
+
+    isDead = true;
+
+    speed = 0f;
+    animator.SetTrigger("Loose");
+
+    Collider col = GetComponent<Collider>();
+    if (col != null)
+        col.enabled = false;
+
+    StartCoroutine(DestroyAfterDeath());
 }
+IEnumerator DestroyAfterDeath()
+    {
+        yield return new WaitForSeconds(1.5f); // animasyon süresi
+        Destroy(gameObject);
+    }
+
+
+
 
 }
