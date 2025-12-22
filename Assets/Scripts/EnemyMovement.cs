@@ -12,11 +12,14 @@ public class EnemyMovement : MonoBehaviour
 
     public bool isDead { get; private set; } = false;
 
+    public Material skeletonDeadMat;
+    public GameObject fire;
 
     void Start()
     {
         waypoints = waypoint.GetComponentsInChildren<Transform>();
         animator = GetComponentInChildren<Animator>();
+        
     }
 
     void Update()
@@ -63,6 +66,13 @@ public void Die()
     if (isDead) return;
 
     isDead = true;
+
+    foreach (Renderer r in GetComponentsInChildren<Renderer>())
+    {
+        r.material = skeletonDeadMat;
+    }
+
+    fire.SetActive(true);
 
     speed = 0f;
     animator.SetTrigger("Loose");
