@@ -13,9 +13,10 @@ public class TowerMenuButton : MonoBehaviour
     public GameObject spawnPoint;
     public TroopManager.UnitType unitType = TroopManager.UnitType.None;
     public Sprite [] buttonImages;
+    public RangeTrigger rangeTrigger;
 
     private GameObject unit;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,7 @@ public class TowerMenuButton : MonoBehaviour
                 gameObject.GetComponent<Image>().sprite = buttonImages[0];
                 gameObject.GetComponent<Image>().color = Color.white;
                 unit = Instantiate(unit1Prefab, spawnPoint.transform.position, Quaternion.identity);
+                rangeTrigger.AddUnit(unit.GetComponent<Unit>());
             }
             if(TroopManager.Instance.selectedUnitType == TroopManager.UnitType.Unit2 && TroopManager.Instance.unit2Number>0)
             {

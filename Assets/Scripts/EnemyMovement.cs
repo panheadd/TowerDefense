@@ -10,7 +10,6 @@ public class EnemyMovement : MonoBehaviour
     private int waypointIndex = 0;
     private Animator animator;
 
-
     void Start()
     {
         waypoints = waypoint.GetComponentsInChildren<Transform>();

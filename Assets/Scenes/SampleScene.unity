@@ -58040,6 +58040,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90bc75212a7dce42b961e277b470f8e, type: 3}
+--- !u!1 &1767124315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1767124316}
+  - component: {fileID: 1767124317}
+  m_Layer: 0
+  m_Name: Range
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1767124316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767124315}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 971351314}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1767124317
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767124315}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 19
+  m_Center: {x: 2.8, y: 0, z: 3.71}
 --- !u!1001 &1768048346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71920,6 +71973,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7333908887759142462, guid: 123d2a39006864d9ebb63b4ed927d191, type: 3}
       insertIndex: -1
       addedObject: {fileID: 71964334}
+    - targetCorrespondingSourceObject: {fileID: 7333908887759142462, guid: 123d2a39006864d9ebb63b4ed927d191, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1767124316}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5553909677854959528, guid: 123d2a39006864d9ebb63b4ed927d191, type: 3}
       insertIndex: -1
