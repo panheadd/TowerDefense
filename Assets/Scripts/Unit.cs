@@ -12,6 +12,9 @@ public class Unit : MonoBehaviour
     public GameObject fireballPrefab;
     private Transform firePoint;
 
+    public float rotateSpeed = 8f;
+    private EnemyMovement currentTarget;
+
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
@@ -27,6 +30,10 @@ public class Unit : MonoBehaviour
         enemiesInRange.RemoveAll(e => e == null || e.isDead);
         if (enemiesInRange.Count == 0)
             return;
+
+
+        currentTarget = enemiesInRange[0];
+        RotateTowardsTarget();
 
         if (!isAttacking && Time.time >= nextAttackTime)
         {
@@ -67,7 +74,6 @@ public class Unit : MonoBehaviour
 
         animator.SetTrigger("Attack");
 
-        // animasyon sonrası
         yield return new WaitForSeconds(0.5f);
 
         SpawnFireball(target);
@@ -85,6 +91,23 @@ public class Unit : MonoBehaviour
 
         fb.GetComponent<Fireball>().SetTarget(target);
     }
+
+    void RotateTowardsTarget()
+{
+    if (currentTarget == null) return;
+
+    Vector3 dir = currentTarget.transform.position - transform.position;
+    dir.y = 0f; 
+
+    if (dir == Vector3.zero) return;
+
+    Quaternion targetRot = Quaternion.LookRotation(dir);
+    transform.rotation = Quaternion.Slerp(
+        transform.rotation,
+        targetRot,
+        rotateSpeed * Time.deltaTime
+    );
+}
 
 
 }

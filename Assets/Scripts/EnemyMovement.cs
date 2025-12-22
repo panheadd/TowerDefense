@@ -75,7 +75,7 @@ public void Die()
 }
 IEnumerator DestroyAfterDeath()
     {
-        yield return new WaitForSeconds(1.5f); // animasyon süresi
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }
 
