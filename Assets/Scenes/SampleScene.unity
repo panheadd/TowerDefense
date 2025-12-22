@@ -5965,6 +5965,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 1767124318}
+  buttonSound: {fileID: 1277635316}
 --- !u!1001 &200790914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8317,6 +8318,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &287155230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8809,6 +8811,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &303728339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11336,6 +11339,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 1621673891}
+  buttonSound: {fileID: 0}
 --- !u!114 &400588472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15177,6 +15181,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 1303333492}
+  buttonSound: {fileID: 0}
 --- !u!114 &511554749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20545,6 +20550,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &670812124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22901,6 +22907,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &725658735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26347,6 +26354,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &819521217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28499,6 +28507,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &880028935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34917,6 +34926,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1083825479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36905,6 +36915,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1117333074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41404,6 +41415,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1263394266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41745,8 +41757,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1277635317}
   clickSound: {fileID: 8300000, guid: fcecb1fc855324fbcaa7b76a62a372e1, type: 3}
-  unitSound: {fileID: 8300000, guid: 2ff9db6b9c6b744979e40c88b7352960, type: 3}
+  unitSound: {fileID: 8300000, guid: 58e5ceccc723d4350b7de6cbb8d72fcb, type: 3}
   purchaseSound: {fileID: 8300000, guid: 2280b65dad46842fc82a3d4f652f158c, type: 3}
+  unitPlace: {fileID: 8300000, guid: da06395db19b3499fa2ea2d601740e71, type: 3}
 --- !u!82 &1277635317
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45322,6 +45335,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1362368736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46323,6 +46337,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 1621673891}
+  buttonSound: {fileID: 0}
 --- !u!114 &1397276602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48908,6 +48923,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1456868876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57162,6 +57178,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 1303333492}
+  buttonSound: {fileID: 0}
 --- !u!114 &1740874880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58983,6 +59000,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1778881547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59316,6 +59334,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1788745443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60588,6 +60607,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 1767124318}
+  buttonSound: {fileID: 1277635316}
 --- !u!1 &1817145720
 GameObject:
   m_ObjectHideFlags: 0
@@ -60990,6 +61010,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1837020276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62411,6 +62432,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1869175749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62749,6 +62771,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1875125879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65447,6 +65470,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1943335431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66148,6 +66172,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1965101948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67077,6 +67102,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &1985836991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70902,6 +70928,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &2105957200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71771,6 +71798,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 1767124318}
+  buttonSound: {fileID: 1277635316}
 --- !u!4 &2134368728 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1519188697402770169, guid: a90bc75212a7dce42b961e277b470f8e, type: 3}
@@ -71839,6 +71867,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9db56cd73c1c641a5a8b6da64a0be7f8, type: 3}
   - {fileID: 21300000, guid: e0d42664c160a41adbc439fb301cc576, type: 3}
   rangeTrigger: {fileID: 0}
+  buttonSound: {fileID: 0}
 --- !u!114 &2136220614
 MonoBehaviour:
   m_ObjectHideFlags: 0

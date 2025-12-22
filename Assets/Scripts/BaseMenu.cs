@@ -9,6 +9,14 @@ public class BaseMenu : MonoBehaviour
     public Button button1;
     public Button button2;
     public Button button3;
+     Coroutine highlightRoutine;
+    Color originalColor;
+    bool isHighlighting;
+
+    void Awake()
+    {
+        originalColor = button1.image.color;
+    }
 
     public void BuyUnit1()
     {
@@ -55,19 +63,24 @@ public class BaseMenu : MonoBehaviour
 
     public void HighlightButton(Button button)
     {
-        StartCoroutine(HighlightRoutine(button));
+        if (highlightRoutine != null)
+            StopCoroutine(highlightRoutine);
+
+        highlightRoutine = StartCoroutine(HighlightRoutine(button));
     }
 
     IEnumerator HighlightRoutine(Button button)
     {
-        Image img = button.image;
+        isHighlighting = true;
 
-        Color originalColor = img.color; 
-        img.color = Color.yellow;         
+        button.image.color = Color.yellow;
 
         yield return new WaitForSeconds(0.5f);
 
-        img.color = originalColor;
+        button.image.color = originalColor;
+
+        isHighlighting = false;
+        highlightRoutine = null;
     }
 }
 

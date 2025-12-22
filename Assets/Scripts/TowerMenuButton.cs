@@ -16,6 +16,8 @@ public class TowerMenuButton : MonoBehaviour
     public RangeTrigger rangeTrigger;
 
     private GameObject unit;
+
+    public ButtonSound buttonSound;
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,7 @@ public class TowerMenuButton : MonoBehaviour
                 gameObject.GetComponent<Image>().color = Color.white;
                 unit = Instantiate(unit1Prefab, spawnPoint.transform.position, Quaternion.identity);
                 rangeTrigger.AddUnit(unit.GetComponent<Unit>());
+                buttonSound.playUnitPlace();
             }
             if(TroopManager.Instance.selectedUnitType == TroopManager.UnitType.Unit2 && TroopManager.Instance.unit2Number>0)
             {
@@ -52,6 +55,8 @@ public class TowerMenuButton : MonoBehaviour
                 gameObject.GetComponent<Image>().sprite = buttonImages[1];
                 gameObject.GetComponent<Image>().color = Color.white;
                 unit = Instantiate(unit2Prefab, spawnPoint.transform.position, Quaternion.identity);
+
+                buttonSound.playUnitPlace();
             }
             if(TroopManager.Instance.selectedUnitType == TroopManager.UnitType.Unit3 && TroopManager.Instance.unit3Number>0)
             {
@@ -61,6 +66,8 @@ public class TowerMenuButton : MonoBehaviour
                 gameObject.GetComponent<Image>().sprite = buttonImages[2];
                 gameObject.GetComponent<Image>().color = Color.white;
                 unit = Instantiate(unit3Prefab, spawnPoint.transform.position, Quaternion.identity);
+
+                buttonSound.playUnitPlace();
             }
         }
 
@@ -94,5 +101,6 @@ public class TowerMenuButton : MonoBehaviour
         unitType = TroopManager.UnitType.None;
         gameObject.GetComponent<Image>().sprite = null;
         gameObject.GetComponent<Image>().color = new Color32(0x36, 0x27, 0x8A, 255);
+        buttonSound.playUnitPlace();
     }
 }
