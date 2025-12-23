@@ -72625,7 +72625,7 @@ PrefabInstance:
     - target: {fileID: 4946706978391393266, guid: 3beb03570192747d3927d8ea263beb70, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 5077240515066874690, guid: 140909faa8a4c41879d734b4693912cd, type: 3}
+      objectReference: {fileID: 4225021041578670267, guid: 714ec02c484fd4a319fcaa7c02ef6314, type: 3}
     - target: {fileID: 4946706978391393266, guid: 3beb03570192747d3927d8ea263beb70, type: 3}
       propertyPath: enemiesInWave
       value: 20
