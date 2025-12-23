@@ -1589,6 +1589,7 @@ MonoBehaviour:
   attackRate: 5
   projectilePrefab: {fileID: 8602724226500023733, guid: df9e41b2110ee4beb81338fc6a400345, type: 3}
   rotateSpeed: 8
+  soundManager: {fileID: 7842969055505867938, guid: 322bd8407d4884e99a3d2189b9d9ddf6, type: 3}
 --- !u!1 &5405276499741604605
 GameObject:
   m_ObjectHideFlags: 0

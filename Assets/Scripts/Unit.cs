@@ -17,9 +17,11 @@ public class Unit : MonoBehaviour
 
     public float rotateSpeed = 8f;
     protected EnemyMovement currentTarget;
+    private SoundManager soundManager;
 
     protected virtual void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
         animator = GetComponentInChildren<Animator>();
         firePoint = transform.Find("FireBallPoint");
     }
@@ -84,6 +86,7 @@ public class Unit : MonoBehaviour
         );
 
         proj.GetComponent<Fireball>().SetTarget(target);
+        soundManager.PlayFireBallSound();
     }
 
     protected void RotateTowardsTarget()
