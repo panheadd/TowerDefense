@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   skeletonDeadMat: {fileID: 2100000, guid: ccf23e6929247408fba9daf1296d3d30, type: 2}
+  skeletonDeadMat2: {fileID: 2100000, guid: d47ddb34ca3f44ec7a6a33d189c2b36e, type: 2}
   fire: {fileID: 3244980279639102054}
 --- !u!136 &5262705434191928044
 CapsuleCollider:

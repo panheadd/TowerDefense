@@ -13,7 +13,10 @@ public class EnemyMovement : MonoBehaviour
     public bool isDead { get; private set; } = false;
 
     public Material skeletonDeadMat;
+    public Material skeletonDeadMat2;
+
     public GameObject fire;
+    public GameObject lightning;
 
     void Start()
     {
@@ -73,6 +76,50 @@ public void Die()
     }
 
     fire.SetActive(true);
+
+    speed = 0f;
+    animator.SetTrigger("Loose");
+
+    Collider col = GetComponent<Collider>();
+    if (col != null)
+        col.enabled = false;
+
+    StartCoroutine(DestroyAfterDeath());
+}
+
+public void DieByLightning()
+{
+    if (isDead) return;
+
+    isDead = true;
+
+    foreach (Renderer r in GetComponentsInChildren<Renderer>())
+    {
+        r.material = skeletonDeadMat2;
+    }
+
+    lightning.SetActive(true);
+
+    speed = 0f;
+    animator.SetTrigger("Loose");
+
+    Collider col = GetComponent<Collider>();
+    if (col != null)
+        col.enabled = false;
+
+    StartCoroutine(DestroyAfterDeath());
+}
+
+public void DieByLightningArea()
+{
+    if (isDead) return;
+
+    isDead = true;
+
+    foreach (Renderer r in GetComponentsInChildren<Renderer>())
+    {
+        r.material = skeletonDeadMat2;
+    }
 
     speed = 0f;
     animator.SetTrigger("Loose");

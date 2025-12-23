@@ -5956,7 +5956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit1Prefab: {fileID: 4800025381604194060, guid: 8cdd3d3cf08694f66971b2da9dfb2e9b, type: 3}
-  unit2Prefab: {fileID: 3176550796693840299, guid: 154f385c85e0c4dd092f9698e87bce11, type: 3}
+  unit2Prefab: {fileID: 479383242255966427, guid: 7fa00ec58f6694ec29b187fad0d25737, type: 3}
   unit3Prefab: {fileID: 3247146947967152750, guid: ec7fca19a45ef42408b3dbc0cf9b425f, type: 3}
   spawnPoint: {fileID: 207184013}
   unitType: 0
@@ -30004,7 +30004,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c895c3f9263a8476e9ca473c23583c67, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -60726,7 +60726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit1Prefab: {fileID: 4800025381604194060, guid: 8cdd3d3cf08694f66971b2da9dfb2e9b, type: 3}
-  unit2Prefab: {fileID: 3176550796693840299, guid: 154f385c85e0c4dd092f9698e87bce11, type: 3}
+  unit2Prefab: {fileID: 479383242255966427, guid: 7fa00ec58f6694ec29b187fad0d25737, type: 3}
   unit3Prefab: {fileID: 3247146947967152750, guid: ec7fca19a45ef42408b3dbc0cf9b425f, type: 3}
   spawnPoint: {fileID: 71964333}
   unitType: 0
@@ -71917,7 +71917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit1Prefab: {fileID: 4800025381604194060, guid: 8cdd3d3cf08694f66971b2da9dfb2e9b, type: 3}
-  unit2Prefab: {fileID: 3176550796693840299, guid: 154f385c85e0c4dd092f9698e87bce11, type: 3}
+  unit2Prefab: {fileID: 479383242255966427, guid: 7fa00ec58f6694ec29b187fad0d25737, type: 3}
   unit3Prefab: {fileID: 3247146947967152750, guid: ec7fca19a45ef42408b3dbc0cf9b425f, type: 3}
   spawnPoint: {fileID: 1894519960}
   unitType: 0
@@ -72625,7 +72625,15 @@ PrefabInstance:
     - target: {fileID: 4946706978391393266, guid: 3beb03570192747d3927d8ea263beb70, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 202207156443224247, guid: 640c9fd8e81e44e01bbf81cbc48c940e, type: 3}
+      objectReference: {fileID: 5077240515066874690, guid: 140909faa8a4c41879d734b4693912cd, type: 3}
+    - target: {fileID: 4946706978391393266, guid: 3beb03570192747d3927d8ea263beb70, type: 3}
+      propertyPath: enemiesInWave
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946706978391393266, guid: 3beb03570192747d3927d8ea263beb70, type: 3}
+      propertyPath: timeBetweenEnemies
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

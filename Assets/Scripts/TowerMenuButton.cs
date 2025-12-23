@@ -55,7 +55,7 @@ public class TowerMenuButton : MonoBehaviour
                 gameObject.GetComponent<Image>().sprite = buttonImages[1];
                 gameObject.GetComponent<Image>().color = Color.white;
                 unit = Instantiate(unit2Prefab, spawnPoint.transform.position, Quaternion.identity);
-
+                rangeTrigger.AddUnit(unit.GetComponent<Unit2>());
                 buttonSound.playUnitPlace();
             }
             if(TroopManager.Instance.selectedUnitType == TroopManager.UnitType.Unit3 && TroopManager.Instance.unit3Number>0)

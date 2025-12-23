@@ -5,42 +5,41 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     public List<EnemyMovement> enemiesInRange = new List<EnemyMovement>();
+
     public float attackRate = 5f;
-    private float nextAttackTime = 0f;
-    private Animator animator;
-    private bool isAttacking = false;
-    public GameObject fireballPrefab;
-    private Transform firePoint;
+    protected float nextAttackTime = 0f;
+
+    protected Animator animator;
+    protected bool isAttacking = false;
+
+    public GameObject projectilePrefab;   // 🔁 fireball yerine generic
+    protected Transform firePoint;
 
     public float rotateSpeed = 8f;
-    private EnemyMovement currentTarget;
+    protected EnemyMovement currentTarget;
 
-    void Start()
+    protected virtual void Start()
     {
         animator = GetComponentInChildren<Animator>();
         firePoint = transform.Find("FireBallPoint");
-        
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (isAttacking) return;
 
-    
         enemiesInRange.RemoveAll(e => e == null || e.isDead);
         if (enemiesInRange.Count == 0)
             return;
 
-
         currentTarget = enemiesInRange[0];
         RotateTowardsTarget();
 
-        if (!isAttacking && Time.time >= nextAttackTime)
+        if (Time.time >= nextAttackTime)
         {
             StartCoroutine(AttackCoroutine());
             nextAttackTime = Time.time + attackRate;
         }
-        
     }
 
     public void AddEnemy(EnemyMovement enemy)
@@ -54,13 +53,7 @@ public class Unit : MonoBehaviour
         enemiesInRange.Remove(enemy);
     }
 
-    public EnemyMovement GetFirstEnemy()
-    {
-        if (enemiesInRange.Count == 0) return null;
-        return enemiesInRange[0];
-    }
-
-    IEnumerator AttackCoroutine()
+    protected virtual IEnumerator AttackCoroutine()
     {
         isAttacking = true;
 
@@ -76,38 +69,46 @@ public class Unit : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        SpawnFireball(target);
+        SpawnProjectile(target);   // 🔥 kritik nokta
 
         isAttacking = false;
     }
 
-    void SpawnFireball(EnemyMovement target)
+    // 🔥 override edilecek method
+    protected virtual void SpawnProjectile(EnemyMovement target)
     {
-        GameObject fb = Instantiate(
-            fireballPrefab,
+        GameObject proj = Instantiate(
+            projectilePrefab,
             firePoint.position,
             firePoint.rotation
         );
 
-        fb.GetComponent<Fireball>().SetTarget(target);
+        proj.GetComponent<Fireball>().SetTarget(target);
     }
 
-    void RotateTowardsTarget()
+    protected void RotateTowardsTarget()
+    {
+        if (currentTarget == null) return;
+
+        Vector3 dir = currentTarget.transform.position - transform.position;
+        dir.y = 0f;
+
+        if (dir == Vector3.zero) return;
+
+        Quaternion targetRot = Quaternion.LookRotation(dir);
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRot,
+            rotateSpeed * Time.deltaTime
+        );
+    }
+
+    protected EnemyMovement GetRandomEnemy()
 {
-    if (currentTarget == null) return;
+    if (enemiesInRange.Count == 0)
+        return null;
 
-    Vector3 dir = currentTarget.transform.position - transform.position;
-    dir.y = 0f; 
-
-    if (dir == Vector3.zero) return;
-
-    Quaternion targetRot = Quaternion.LookRotation(dir);
-    transform.rotation = Quaternion.Slerp(
-        transform.rotation,
-        targetRot,
-        rotateSpeed * Time.deltaTime
-    );
+    int index = Random.Range(0, enemiesInRange.Count);
+    return enemiesInRange[index];
 }
-
-
 }
