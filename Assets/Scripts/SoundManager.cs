@@ -8,6 +8,8 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip fireBallSound;
+    public AudioClip skeletonDeadSound;
+
 
     void Awake()
     {
@@ -25,6 +27,11 @@ public class SoundManager : MonoBehaviour
     public void PlayFireBallSound()
     {
         audioSource.PlayOneShot(fireBallSound);
+    }
+
+    public void playSkeletonDeadSound()
+    {
+        audioSource.PlayOneShot(skeletonDeadSound);
     }
 }
 

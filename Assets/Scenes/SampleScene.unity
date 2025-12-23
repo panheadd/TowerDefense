@@ -30004,7 +30004,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c895c3f9263a8476e9ca473c23583c67, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -72614,6 +72614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7842969055505867938, guid: 322bd8407d4884e99a3d2189b9d9ddf6, type: 3}
+      propertyPath: skeletonDeadSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bb560229d0814dfb9c7ca3c9ce9fe58, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -6,7 +6,7 @@ public class Unit2 : Unit
 {
     protected override void Start()
     {
-        animator = GetComponentInChildren<Animator>();
+        base.Start();
         firePoint = transform.Find("LightningBallPoint");
     }
     protected override void Update()
@@ -32,6 +32,8 @@ public class Unit2 : Unit
             firePoint.position,
             firePoint.rotation
         );
+
+        SoundManager.Instance.PlayFireBallSound();
         lightning.GetComponent<LighningBall>().SetTarget(target);
     }
 

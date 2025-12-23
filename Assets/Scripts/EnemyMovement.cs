@@ -17,9 +17,12 @@ public class EnemyMovement : MonoBehaviour
 
     public GameObject fire;
     public GameObject lightning;
+        private SoundManager soundManager;
+
 
     void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
         waypoints = waypoint.GetComponentsInChildren<Transform>();
         animator = GetComponentInChildren<Animator>();
         
@@ -84,6 +87,8 @@ public void Die()
     if (col != null)
         col.enabled = false;
 
+    soundManager.playSkeletonDeadSound();
+    
     StartCoroutine(DestroyAfterDeath());
 }
 
@@ -107,6 +112,7 @@ public void DieByLightning()
     if (col != null)
         col.enabled = false;
 
+    soundManager.playSkeletonDeadSound();
     StartCoroutine(DestroyAfterDeath());
 }
 
@@ -128,6 +134,7 @@ public void DieByLightningArea()
     if (col != null)
         col.enabled = false;
 
+    soundManager.playSkeletonDeadSound();
     StartCoroutine(DestroyAfterDeath());
 }
 IEnumerator DestroyAfterDeath()
