@@ -8,7 +8,6 @@ public class Unit3 : Unit
     public List<Unit> units;
 
 
-
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -19,6 +18,11 @@ public class Unit3 : Unit
     // Update is called once per frame
     protected override void Update()
     {
+        units = rangeTrigger.units;
+        buffUnits();
+
+
+
        if (isAttacking) return;
 
         enemiesInRange.RemoveAll(e => e == null || e.isDead);
@@ -43,15 +47,22 @@ public class Unit3 : Unit
     public void buffUnits()
     {
         foreach (Unit unit in units)
-        {
-            if (unit == this) continue;
-
-            if (!unit.buff.activeSelf)
+    {
+        if (unit == null) continue;        // Unit yok
+        if (unit == this) continue;        // Kendini bufflama
+        if (unit.buff == null) continue;   // Buff objesi yok
+        if(unit.buffed == true)
             {
-                unit.buff.SetActive(true);
-                unit.attackRate *= 0.5f;
+                continue;
             }
+
+        if (!unit.buff.activeSelf)
+        {
+            unit.buffed = true;
+            unit.buff.SetActive(true);
+            unit.attackRate *= 0.5f;
         }
+    }
     }
 
 }

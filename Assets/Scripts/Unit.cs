@@ -19,6 +19,7 @@ public class Unit : MonoBehaviour
     protected EnemyMovement currentTarget;
     private SoundManager soundManager;
     public GameObject buff;
+    public bool buffed = false;
 
     protected virtual void Start()
     {

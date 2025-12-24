@@ -15,7 +15,7 @@ public class WaveManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(SpawnWave());
+        //StartCoroutine(SpawnWave());
     
     }
 
