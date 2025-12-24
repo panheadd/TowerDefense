@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public WaveManager waveManager;
     public GameObject backgroundMusic;
     public GameObject backgroundActionMusic;
     public GameObject readyButton;
@@ -35,5 +36,6 @@ public class GameManager : MonoBehaviour
         backgroundActionMusic.SetActive(true);
         readyButton.SetActive(false);
         troopMenu.SetActive(false);
+        StartCoroutine(waveManager.SpawnWave());
     }
 }

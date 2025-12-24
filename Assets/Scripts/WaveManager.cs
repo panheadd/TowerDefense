@@ -19,7 +19,7 @@ public class WaveManager : MonoBehaviour
     
     }
 
-    IEnumerator SpawnWave()
+    public IEnumerator SpawnWave()
     {
         for (int i = 0; i < enemiesInWave; i++)
         {

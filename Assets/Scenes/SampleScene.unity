@@ -38913,6 +38913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92379533cd8664b93b208dc789588cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveManager: {fileID: 2019280357}
   backgroundMusic: {fileID: 922087461}
   backgroundActionMusic: {fileID: 864871132}
   readyButton: {fileID: 156361736}
@@ -69434,6 +69435,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1519188697402770169, guid: a90bc75212a7dce42b961e277b470f8e, type: 3}
   m_PrefabInstance: {fileID: 528955430}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2019280357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4946706978391393266, guid: 3beb03570192747d3927d8ea263beb70, type: 3}
+  m_PrefabInstance: {fileID: 6423053615841529472}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7355f6ef6ac440ea88bd8637b0d5e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2028364021
 GameObject:
   m_ObjectHideFlags: 0
