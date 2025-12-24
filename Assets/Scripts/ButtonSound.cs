@@ -10,6 +10,8 @@ public class ButtonSound : MonoBehaviour
     public AudioClip unitSound;
     public AudioClip purchaseSound;
     public AudioClip unitPlace;
+    public AudioClip readySound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +41,9 @@ public class ButtonSound : MonoBehaviour
     public void playUnitPlace()
     {
         audioSource.PlayOneShot(unitPlace);
+    }  
+    public void playReadySound()
+    {
+        audioSource.PlayOneShot(readySound);
     }  
 }

@@ -21,6 +21,9 @@ public class TowerMenu : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (GameManager.Instance.waveStarted)
+            return;
+            
         towerMenuUI.SetActive(true);
         buttonSound.PlaySound();
     }

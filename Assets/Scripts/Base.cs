@@ -21,6 +21,8 @@ public class Base : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (GameManager.Instance.waveStarted)
+            return;
         baseMenuUI.SetActive(true);
         buttonSound.PlaySound();   
     }

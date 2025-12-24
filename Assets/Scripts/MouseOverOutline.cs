@@ -9,6 +9,9 @@ public class MouseHoverOutline : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.waveStarted)
+            return;
+
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
         {
             ClearOutlines();
