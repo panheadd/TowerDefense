@@ -7,7 +7,7 @@ using TMPro;
 public class GoldManager : MonoBehaviour
 {
     public static GoldManager Instance;
-    public int gold = 3100;
+    public int gold = 50;
     public TMP_Text goldText;
     public TMP_Text [] button1GoldTexts;
 
@@ -45,6 +45,11 @@ public class GoldManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void addGold(int amount)
+    {
+        gold = gold+amount;
     }
 }
 
