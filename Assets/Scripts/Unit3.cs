@@ -19,7 +19,20 @@ public class Unit3 : Unit
     // Update is called once per frame
     protected override void Update()
     {
-        base.Update();
+       if (isAttacking) return;
+
+        enemiesInRange.RemoveAll(e => e == null || e.isDead);
+        if (enemiesInRange.Count == 0)
+            return;
+
+        currentTarget = GetRandomEnemy();
+        RotateTowardsTarget();
+
+        if (Time.time >= nextAttackTime)
+        {
+            StartCoroutine(AttackCoroutine());
+            nextAttackTime = Time.time + attackRate;
+        }
     }
 
     public void setRangeTrigger(RangeTrigger rangeTrigger)
