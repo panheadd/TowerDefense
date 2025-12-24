@@ -12,12 +12,13 @@ public class Unit : MonoBehaviour
     protected Animator animator;
     protected bool isAttacking = false;
 
-    public GameObject projectilePrefab;   // 🔁 fireball yerine generic
+    public GameObject projectilePrefab;   
     protected Transform firePoint;
 
     public float rotateSpeed = 8f;
     protected EnemyMovement currentTarget;
     private SoundManager soundManager;
+    public GameObject buff;
 
     protected virtual void Start()
     {

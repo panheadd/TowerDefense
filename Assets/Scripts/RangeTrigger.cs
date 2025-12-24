@@ -24,6 +24,17 @@ public class RangeTrigger : MonoBehaviour
             units.Add(unit);
     }
 
+    public void AddUnit3(Unit3 unit)
+    {
+        if (!units.Contains(unit))
+    {
+        units.Add(unit);
+        unit.setRangeTrigger(this);
+        unit.units = units;
+        unit.buffUnits();
+    }
+    }
+
     public void RemoveUnit(Unit unit)
     {
         units.Remove(unit);

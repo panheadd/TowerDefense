@@ -66,7 +66,7 @@ public class TowerMenuButton : MonoBehaviour
                 gameObject.GetComponent<Image>().sprite = buttonImages[2];
                 gameObject.GetComponent<Image>().color = Color.white;
                 unit = Instantiate(unit3Prefab, spawnPoint.transform.position, Quaternion.identity);
-
+                rangeTrigger.AddUnit3(unit.GetComponent<Unit3>());
                 buttonSound.playUnitPlace();
             }
         }

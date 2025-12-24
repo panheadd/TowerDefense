@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
 
     public GameObject fire;
     public GameObject lightning;
-        private SoundManager soundManager;
+    private SoundManager soundManager;
 
 
     void Start()
