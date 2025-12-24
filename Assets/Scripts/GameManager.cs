@@ -26,7 +26,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!waveStarted)
+            return;
+
+        checkWaveEnd();
     }
 
     public void startWave()
@@ -37,5 +40,24 @@ public class GameManager : MonoBehaviour
         readyButton.SetActive(false);
         troopMenu.SetActive(false);
         StartCoroutine(waveManager.SpawnWave());
+    }
+
+    void checkWaveEnd()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        if (enemies.Length == 0)
+        {
+            endWave();
+        }
+    }
+
+    void endWave()
+    {
+        backgroundMusic.SetActive(true);
+        backgroundActionMusic.SetActive(false);
+        readyButton.SetActive(true);
+        troopMenu.SetActive(true);
+        waveStarted = false;
     }
 }
