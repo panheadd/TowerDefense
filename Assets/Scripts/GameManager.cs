@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +17,13 @@ public class GameManager : MonoBehaviour
     public GameObject troopMenu;
     public static GameManager Instance;
     public bool waveStarted = false;
+    public ButtonSound buttonSound;
+    public GameObject waveClearInfo;
+    public GameObject levelPassedInfo;
+    public GameObject GameOverInfo;
+    public GameObject objectives;
+    private TextMeshProUGUI tmpText;
+
 
 
     private void Awake()
@@ -66,6 +75,7 @@ public class GameManager : MonoBehaviour
         backgroundActionMusic.SetActive(true);
         readyButton.SetActive(false);
         troopMenu.SetActive(false);
+        objectives.SetActive(false);
         StartCoroutine(wave1.SpawnWave());
     }
 
@@ -76,6 +86,7 @@ public class GameManager : MonoBehaviour
         backgroundActionMusic.SetActive(true);
         readyButton.SetActive(false);
         troopMenu.SetActive(false);
+        objectives.SetActive(false);
         StartCoroutine(wave2.SpawnWave());
     }
     public void startWave3()
@@ -85,6 +96,7 @@ public class GameManager : MonoBehaviour
         backgroundActionMusic.SetActive(true);
         readyButton.SetActive(false);
         troopMenu.SetActive(false);
+        objectives.SetActive(false);
         StartCoroutine(StartWave3Sequence());
     }
 
@@ -103,19 +115,58 @@ public class GameManager : MonoBehaviour
 
     void endWave()
     {
-        backgroundMusic.SetActive(true);
-        backgroundActionMusic.SetActive(false);
-        readyButton.SetActive(true);
-        troopMenu.SetActive(true);
-        waveStarted = false;
         if (waveNo == 2)
         {
-            GoldManager.Instance.addGold(50);
+            buttonSound.playWaveClearSound();
+            backgroundMusic.SetActive(true);
+            backgroundActionMusic.SetActive(false);
+            readyButton.SetActive(true);
+            troopMenu.SetActive(true);
+            waveStarted = false;
+            tmpText = objectives.GetComponentInChildren<TextMeshProUGUI>();
+
+            tmpText.text = "Prepare for the second wave";
+
+            objectives.SetActive(true);
+            waveClearInfo.SetActive(true);
         }
         if (waveNo == 3)
         {
-            GoldManager.Instance.addGold(50);
+            buttonSound.playWaveClearSound();
+            backgroundMusic.SetActive(true);
+            backgroundActionMusic.SetActive(false);
+            readyButton.SetActive(true);
+            troopMenu.SetActive(true);
+            waveStarted = false;
+
+            tmpText = objectives.GetComponentInChildren<TextMeshProUGUI>();
+
+            tmpText.text = "Prepare for the third wave";
+            
+            objectives.SetActive(true);
+            waveClearInfo.SetActive(true);
+            
         }
+        if (waveNo == 4)
+        {
+            buttonSound.playWaveClearSound();
+            backgroundMusic.SetActive(true);
+            backgroundActionMusic.SetActive(false);
+            waveStarted = false;
+            Time.timeScale = 0f;
+            levelPassedInfo.SetActive(true);
+        }
+    }
+
+    public void GameOver()
+    {
+        buttonSound.playGameOverSound();
+        backgroundMusic.SetActive(false);
+        backgroundActionMusic.SetActive(false);
+        waveStarted = false;
+        Time.timeScale = 0f;
+        GameOverInfo.SetActive(true);
+        
     }
 
     IEnumerator StartWave3Sequence()

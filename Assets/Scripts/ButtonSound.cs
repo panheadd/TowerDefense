@@ -11,6 +11,8 @@ public class ButtonSound : MonoBehaviour
     public AudioClip purchaseSound;
     public AudioClip unitPlace;
     public AudioClip readySound;
+    public AudioClip waveClearSound;
+    public AudioClip gameOverSound;
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +47,14 @@ public class ButtonSound : MonoBehaviour
     public void playReadySound()
     {
         audioSource.PlayOneShot(readySound);
-    }  
+    }
+    public void playWaveClearSound()
+    {
+        audioSource.PlayOneShot(waveClearSound);
+    }
+    public void playGameOverSound()
+    {
+        audioSource.PlayOneShot(gameOverSound);
+    }
+      
 }

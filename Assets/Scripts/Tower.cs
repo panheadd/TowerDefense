@@ -7,6 +7,7 @@ public class TowerMenu : MonoBehaviour
     public ButtonSound buttonSound;
 
     public GameObject towerMenuUI;
+    public GameObject info;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,10 @@ public class TowerMenu : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if(info != null)
+        {
+            info.SetActive(false);
+        }
         if (GameManager.Instance.waveStarted)
             return;
             

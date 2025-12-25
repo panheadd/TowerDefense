@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOver : MonoBehaviour
+public class InfoMenu : MonoBehaviour
 {
-    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +15,20 @@ public class GameOver : MonoBehaviour
     {
         
     }
+ 
 
-     private void OnTriggerEnter(Collider other)
+    public void CloseMenu()
     {
-        if (other.CompareTag("Enemy"))
-        {
-            gameManager.GameOver();
-            
-        }
+        gameObject.SetActive(false);
+        GoldManager.Instance.addGold(50);
+    }
+
+    public void returnMainMenu()
+    {
+        
+    }
+    public void tryAgain()
+    {
+        
     }
 }
