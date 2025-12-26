@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverInfo;
     public GameObject objectives;
     private TextMeshProUGUI tmpText;
+    
 
 
 
@@ -167,6 +169,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         GameOverInfo.SetActive(true);
         
+    }
+
+    public void returnMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+
     }
 
     IEnumerator StartWave3Sequence()

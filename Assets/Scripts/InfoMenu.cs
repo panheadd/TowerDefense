@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class InfoMenu : MonoBehaviour
 {
@@ -25,10 +27,18 @@ public class InfoMenu : MonoBehaviour
 
     public void returnMainMenu()
     {
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+
+    
         
     }
     public void tryAgain()
     {
+        SceneManager.LoadScene("Level1");
+        Time.timeScale = 1f;
+
+        
         
     }
 }
