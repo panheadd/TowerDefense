@@ -655,9 +655,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: []
-  attackRate: 5
-  lightnigBall: {fileID: 1911968749571002505, guid: be4b6e76086ee4fd097cc3c6f35925b6, type: 3}
+  attackRate: 2.5
+  projectilePrefab: {fileID: 0}
   rotateSpeed: 8
+  buff: {fileID: 0}
+  buffed: 0
 --- !u!1 &3267030189526426327
 GameObject:
   m_ObjectHideFlags: 0

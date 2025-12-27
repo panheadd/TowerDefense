@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 3101187219553811658}
   - component: {fileID: 1144892465490148437}
   m_Layer: 8
-  m_Name: skelet 1 1 1 1 1 1
+  m_Name: V1Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,6 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  isTargeted: 0
   skeletonDeadMat: {fileID: 2100000, guid: ccf23e6929247408fba9daf1296d3d30, type: 2}
   skeletonDeadMat2: {fileID: 2100000, guid: d47ddb34ca3f44ec7a6a33d189c2b36e, type: 2}
   fire: {fileID: 4832956823876489684}

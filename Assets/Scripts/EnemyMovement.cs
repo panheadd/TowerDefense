@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     private Transform[] waypoints;
     private int waypointIndex = 0;
     private Animator animator;
+    public bool isTargeted = false;
 
     public bool isDead { get; private set; } = false;
 

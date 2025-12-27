@@ -59,26 +59,45 @@ public class Unit : MonoBehaviour
 
     protected virtual IEnumerator AttackCoroutine()
     {
+        // tower  adam sayısı al bunu 
+        // listeye bak 
+        // listedeye yeteri kadar 
         isAttacking = true;
 
-        EnemyMovement target = enemiesInRange[0];
-        if (target == null)
+        int count = 0;
+        EnemyMovement target = null;
+        foreach (EnemyMovement enemyPossible in enemiesInRange)
         {
-            enemiesInRange.RemoveAt(0);
-            isAttacking = false;
-            yield break;
+            // ittarate isTargeted unit false
+            target = enemiesInRange[count];
+            if (target.isTargeted)
+            {
+                count++;
+                continue;
+            }
+            // null stage
+            if (target == null)
+            {
+                enemiesInRange.RemoveAt(0);
+                isAttacking = false;
+                yield break;
+            }
+            
+            //success stage
+            if( enemyPossible.isTargeted == false) break;
         }
-
+        if ( target != null) target.isTargeted = true;
+        
         animator.SetTrigger("Attack");
 
         yield return new WaitForSeconds(0.5f);
 
-        SpawnProjectile(target);   // 🔥 kritik nokta
+        SpawnProjectile(target);   // kritik nokta
 
         isAttacking = false;
     }
 
-    // 🔥 override edilecek method
+    // override edilecek method
     protected virtual void SpawnProjectile(EnemyMovement target)
     {
         GameObject proj = Instantiate(

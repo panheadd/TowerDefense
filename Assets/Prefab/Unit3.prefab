@@ -947,10 +947,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesInRange: []
-  attackRate: 5
+  attackRate: 6
   projectilePrefab: {fileID: 8602724226500023733, guid: df9e41b2110ee4beb81338fc6a400345, type: 3}
   rotateSpeed: 8
   buff: {fileID: 2058132620367170754}
+  buffed: 0
   units: []
 --- !u!1 &3333946788688919474
 GameObject:

@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverInfo;
     public GameObject objectives;
     private TextMeshProUGUI tmpText;
+    public GameObject timeButton;
     
 
 
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour
         readyButton.SetActive(false);
         troopMenu.SetActive(false);
         objectives.SetActive(false);
+        timeButton.SetActive(true);
         StartCoroutine(wave1.SpawnWave());
     }
 
@@ -89,6 +91,7 @@ public class GameManager : MonoBehaviour
         readyButton.SetActive(false);
         troopMenu.SetActive(false);
         objectives.SetActive(false);
+        timeButton.SetActive(true);
         StartCoroutine(wave2.SpawnWave());
     }
     public void startWave3()
@@ -99,6 +102,7 @@ public class GameManager : MonoBehaviour
         readyButton.SetActive(false);
         troopMenu.SetActive(false);
         objectives.SetActive(false);
+        timeButton.SetActive(true);
         StartCoroutine(StartWave3Sequence());
     }
 

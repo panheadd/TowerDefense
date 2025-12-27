@@ -1591,6 +1591,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 8602724226500023733, guid: df9e41b2110ee4beb81338fc6a400345, type: 3}
   rotateSpeed: 8
   buff: {fileID: 7562301939849667279}
+  buffed: 0
 --- !u!1 &5405276499741604605
 GameObject:
   m_ObjectHideFlags: 0

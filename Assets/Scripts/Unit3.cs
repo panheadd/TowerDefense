@@ -60,7 +60,7 @@ public class Unit3 : Unit
         {
             unit.buffed = true;
             unit.buff.SetActive(true);
-            unit.attackRate *= 0.5f;
+            unit.attackRate -= 1f;
         }
     }
     }
